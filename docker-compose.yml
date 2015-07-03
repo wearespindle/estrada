@@ -1,0 +1,16 @@
+db:
+  build: Dockers/db
+  ports:
+    # ext:int port.
+    - 5432:5432
+web:
+  build: .
+  command: python manage.py runserver 0:8000
+  volumes:
+    - .:/home/docker/{{project_name}}
+  ports:
+    # ext:int port.
+    - 8000:8000
+  links:
+    # Define all containers for easy running of development setup.
+    - db
