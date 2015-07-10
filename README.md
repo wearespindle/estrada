@@ -5,11 +5,12 @@ Template to provide defaults for new Django 1.8+ projects with docker + postgres
 ## Requirements
 
 Install pip
-```
-# If you have PIP installed skip this part
+(If you have PIP installed skip this part)
+
 Official guide: https://pip.pypa.io/en/latest/installing.html
 
-# Example for Ubuntu
+Example for Ubuntu
+```
 sudo apt-get install python-pip
 
 # Upgrade pip
@@ -24,11 +25,10 @@ sudo pip install django
 ```
 
 Docker and docker-compose
-```
+
 Depending on your machine the installation process might be different check:
 https://docs.docker.com/installation/
 https://docs.docker.com/compose/install/
-```
 
 Example for Ubuntu
 ```
@@ -43,12 +43,13 @@ sudo pip install docker-compose
 
 To create a new django project with this template:
 ```
+# Replace project_name with the name of your project
 django-admin.py startproject --template=https://github.com/wearespindle/Estrada/archive/master.zip --extension=py,yml,sh --name=Dockerfile,spindle.html project_name
 ```
 
 Build the Docker environment
 ```
-cd /path/to/project/root # Where the docker-compose.yml lives.
+cd /project_name # Where the docker-compose.yml lives.
 docker-compose build
 docker-compose run web python manage.py migrate
 docker-compose up
