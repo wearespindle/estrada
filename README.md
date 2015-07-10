@@ -56,4 +56,4 @@ docker-compose run web python manage.py migrate
 docker-compose up
 ```
 
-Visit the site at localhost:8000 or your dockerhost_ip:8000
+Visit the site at localhost:8005 or your dockerhost_ip:8005
