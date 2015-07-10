@@ -16,7 +16,9 @@ sudo apt-get install python-pip
 pip install -U pip
 ```
 
-A working django version >= 1.5 for generating the project from a template
+A working django version >= 1.5 for generating the project from a template. The
+created project will use django 1.8+ but we need a django version to create
+the project from this template.
 ```
 sudo pip install django
 ```
