@@ -1,4 +1,4 @@
-# Epic Spindle Template for Really Awesome Django Apps (Estrada)
+# Epic Spindle Template for Really Awesome Django Apps (ESTRADA)
 
 Template to provide defaults for new Django 1.8+ projects with docker + postgres included.
 
