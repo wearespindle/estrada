@@ -44,13 +44,14 @@ sudo pip install docker-compose
 To create a new django project with this template:
 ```
 # Replace project_name with the name of your project
-django-admin startproject --template=https://github.com/wearespindle/estrada/archive/master.zip --extension=py,yml,sh --name=Dockerfile,spindle.html project_name
+django-admin startproject --template=https://github.com/wearespindle/estrada/archive/master.zip --extension=py,yml,sh,sql --name=Dockerfile,spindle.html project_name
 ```
 
 Build the Docker environment
 ```
 cd /project_name # Where the docker-compose.yml lives.
 docker-compose build
+docker-compose build db
 # Run this twice if first time fails (slow DB initialization first time)
 docker-compose run web python manage.py migrate
 docker-compose up
