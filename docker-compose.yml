@@ -3,6 +3,13 @@ db:
   ports:
     # ext:int port.
     - "5435:5432"
+  environment:
+    # This is obviously not a safe configuration usage in production.
+    - MYSQL_DATABASE={{project_name}}
+    - MYSQL_USER={{project_name}}
+    - MYSQL_PASSWORD={{project_name}}
+    - MYSQL_ROOT_PASSWORD={{project_name}}
+
 web:
   build: .
   command: python manage.py runserver 0:8000
