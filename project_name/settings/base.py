@@ -26,14 +26,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '{{ secret_key }}')
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-# Database connection settings
-DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost')
-}
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -46,6 +38,11 @@ INSTALLED_APPS = (
 
     # Project apps
     # '{{ project_name }}.apps'
+
+    # Django Extensions is a collection of custom extensions for the Django
+    # Framework.
+    # https://github.com/django-extensions/django-extensions
+    'django_extensions'
 )
 
 MIDDLEWARE_CLASSES = (

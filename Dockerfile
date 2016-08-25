@@ -1,17 +1,8 @@
-FROM ubuntu:14.04
+FROM django:latest
 MAINTAINER {{project_name}}
-
-RUN apt-get update
-
-RUN apt-get install -y \
-    python2.7-dev \
-    python-pip \
-    postgresql \
-    postgresql-server-dev-9.3
 
 RUN useradd docker
 RUN echo "ALL ALL = (ALL) NOPASSWD: ALL" >> /etc/sudoers
-WORKDIR /home/docker
 ENV HOME /home/docker
 
 ADD requirements.txt $HOME/requirements.txt
@@ -24,6 +15,6 @@ RUN chown -R docker:docker $HOME/
 USER docker
 
 ENV DEBUG 1
-ENV DATABASE_URL postgres://{{project_name}}:@db/{{project_name}}
+ENV DATABASE_URL mysql://{{project_name}}:{{project_name}}@db/{{project_name}}
 
 WORKDIR /home/docker/{{project_name}}
