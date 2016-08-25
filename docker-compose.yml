@@ -1,8 +1,8 @@
 db:
-  build: Dockers/db
+  image: mariadb:latest
   ports:
     # ext:int port.
-    - "5435:5432"
+    - "3306:3306"
   environment:
     # This is obviously not a safe configuration usage in production.
     - MYSQL_DATABASE={{project_name}}
