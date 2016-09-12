@@ -58,3 +58,10 @@ docker-compose up
 ```
 
 Visit the site at localhost:8005 or your dockerhost_ip:8005
+
+### Local and production settings
+
+In `{project_name}/settings` some of the settings are split up between `local.py`
+and `prod.py`. These files are used for the settings that are different between
+development (local) and production (prod). The general settings are in `base.py`.
+You are encouraged to use environment variables for any sensitive information
