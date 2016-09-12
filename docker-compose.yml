@@ -21,3 +21,6 @@ web:
   links:
     # Define all containers for easy running of development setup.
     - db
+  environment:
+    - DEBUG=1
+    - DATABASE_URL=mysql://{{project_name}}:{{project_name}}@db/{{project_name}}
