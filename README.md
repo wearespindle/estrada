@@ -1,6 +1,8 @@
 # Epic Spindle Template for Really Awesome Django Apps (ESTRADA)
 
-Template to provide defaults for new Django 1.8+ projects with docker + postgres included.
+Template to provide defaults for new Django projects with docker + mariadb included.
+
+We also wrote a blog about Estrada: https://wearespindle.com/articles/estrada-or-epic-spindle-template-for-really-awesome-django-apps
 
 ## Requirements
 

@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     # Django Extensions is a collection of custom extensions for the Django
     # Framework.
     # https://github.com/django-extensions/django-extensions
-    'django_extensions'
+    'django_extensions',
 )
 
 MIDDLEWARE_CLASSES = (

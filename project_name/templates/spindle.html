@@ -54,7 +54,7 @@
         <span class="terminal-command">docker-compose run web python manage.py migrate</span>
 
         <p>Now for the cool stuff, your stuff. To create your own app you have to run:</p>
-        <span class="terminal-command">docker-compose run web django-admin startapp {{ project_name }}.your_app_name</span>
+        <span class="terminal-command">docker-compose run web django-admin startapp your_app_name</span>
 
         <p>And add your new app to installed_apps in `{{ project_name }}/settings/base.py`.</p>
       </div>
