@@ -4,7 +4,13 @@ Template to provide defaults for new Django projects with docker + mariadb inclu
 
 We also wrote a blog about Estrada: https://wearespindle.com/articles/estrada-or-epic-spindle-template-for-really-awesome-django-apps
 
-## Requirements
+## Status
+
+ Maintained
+
+## Usage
+
+### Requirements
 
 Install pip
 (If you have PIP installed skip this part)
@@ -41,7 +47,7 @@ wget -qO- https://get.docker.com/ | sh
 sudo pip install docker-compose
 ```
 
-## Usage
+### Installation
 
 To create a new django project with this template:
 ```
@@ -56,6 +62,11 @@ docker-compose build
 docker-compose build db
 # Run this twice if first time fails (slow DB initialization first time)
 docker-compose run web python manage.py migrate
+```
+
+### Running
+
+```
 docker-compose up
 ```
 
@@ -67,3 +78,35 @@ In `{project_name}/settings` some of the settings are split up between `local.py
 and `prod.py`. These files are used for the settings that are different between
 development (local) and production (prod). The general settings are in `base.py`.
 You are encouraged to use environment variables for any sensitive information
+
+## Contributing
+
+See the [CONTRIBUTING.md](CONTRIBUTING.md) file on how to contribute to this project.
+
+## Contributors
+
+See the [CONTRIBUTORS.md](CONTRIBUTORS.md) file for a list of contributors to the project.
+
+## Roadmap
+
+### Changelog
+
+The changelog can be found in the [CHANGELOG.md](CHANGELOG.md) file.
+
+### In progress
+
+ * Maintaining
+
+### Future
+
+ * Update all packages to newer versions
+
+## Get in touch with a developer
+
+If you want to report an issue see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more info.
+
+We will be happy to answer your other questions at {opensource@wearespindle.com or insert alias}
+
+## License
+
+ESTRADA is made available under the MIT license. See the [LICENSE file](LICENSE) for more info.
